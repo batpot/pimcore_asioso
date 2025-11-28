@@ -1,0 +1,15 @@
+pimcore:
+    properties:
+        predefined:
+            definitions:
+                c3b964a4-c075-43a5-86d2-48d7b3d5daae:
+                    name: caption
+                    description: ''
+                    key: new_key
+                    type: text
+                    data: 'add a caption here'
+                    config: ''
+                    ctype: document
+                    inheritable: false
+                    creationDate: 1764289830
+                    modificationDate: 1764289841

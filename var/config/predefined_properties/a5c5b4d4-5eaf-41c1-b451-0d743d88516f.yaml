@@ -1,0 +1,15 @@
+pimcore:
+    properties:
+        predefined:
+            definitions:
+                a5c5b4d4-5eaf-41c1-b451-0d743d88516f:
+                    name: image_brick
+                    description: ''
+                    key: new_key
+                    type: text
+                    data: ''
+                    config: ''
+                    ctype: document
+                    inheritable: false
+                    creationDate: 1764289763
+                    modificationDate: 1764289768

@@ -1,0 +1,15 @@
+pimcore:
+    properties:
+        predefined:
+            definitions:
+                8c49dca1-98e3-4b16-8b44-943d91016e1d:
+                    name: bricks
+                    description: ''
+                    key: new_key
+                    type: text
+                    data: '[   {"type":"text","title":"Indonectetus facilis","content":"Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.","more":""},   {"type":"text","title":"Indonectetus facilis","content":"Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.","more":""},   {"type":"text","title":"Indonectetus facilis","content":"Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.","more":""},   {"type":"intro","title":"Indonectetus facilis leo nibh","content":"This is a W3C compliant free website template...","image":"https://via.placeholder.com/450x250","more":""} ]'
+                    config: ''
+                    ctype: document
+                    inheritable: false
+                    creationDate: 1764290315
+                    modificationDate: 1764326026
