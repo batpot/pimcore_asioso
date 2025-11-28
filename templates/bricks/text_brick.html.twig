@@ -1,0 +1,5 @@
+<div class="brick text-brick">
+  <h2>{{ brick.title|default('Indonectetus facilis') }}</h2>
+  <p>{{ brick.content|default('Lorem ipsum dolor sit amet, consectetur...')|raw }}</p>
+  {% if brick.more %}<footer class="more"><a href="{{ brick.more }}">Read More &raquo;</a></footer>{% endif %}
+</div>

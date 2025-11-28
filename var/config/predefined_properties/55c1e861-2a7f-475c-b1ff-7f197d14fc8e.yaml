@@ -1,0 +1,15 @@
+pimcore:
+    properties:
+        predefined:
+            definitions:
+                55c1e861-2a7f-475c-b1ff-7f197d14fc8e:
+                    name: text_brick
+                    description: ''
+                    key: new_key
+                    type: text
+                    data: 'Welcome to out page'
+                    config: ''
+                    ctype: document
+                    inheritable: false
+                    creationDate: 1764289736
+                    modificationDate: 1764289757

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{ document.title ?? 'asioso test template' }}</title>
+
+  <link rel="stylesheet" href="/static/css/layout.css">
+
+  <!--[if lt IE 9]>
+        <script src="/static/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <div class="wrapper row1">
+    {% block header %}
+    {% include 'snippets/header.html.twig' %}
+    {% endblock %}
+  </div>
+
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+
+      {# Slider (simple) #}
+      <section id="slider">
+        {% if slider_image is defined and slider_image %}
+        <a href="#"><img src="{{ slider_image }}" alt=""></a>
+        {% else %}
+        <a href="#"><img src="src=" /static/images/960x360.gif" alt=""></a>
+        {% endif %}
+      </section>
+
+      <main id="homepage" role="main">
+        {# Include the hero teaser snippet #}
+        {% include 'snippets/hero.html.twig' %}
+
+        {# services / bricks loop #}
+        <section id="services" class="clear">
+          {{ pimcore_block('services', {
+          'allowed': ['textBrick', 'imageBrick']
+           }) }}
+        </section>
+
+        {# intro area (render first intro-type brick if any) #}
+        <section id="intro" class="last clear">
+          {{ pimcore_block('intro', {
+          'allowed': ['imageBrick', 'textBrick']
+          }) }}
+        </section>
+
+
+        {% if editmode %}
+          <h2>Main Content</h2>
+        {% endif %}
+
+        {{ pimcore_wysiwyg('mainContent') }}
+
+      </main>
+
+    </div>
+  </div>
+
+  <div class="wrapper row3">
+    {% block footer %}
+    {% include 'snippets/footer.html.twig' %}
+    {% endblock %}
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+pimcore:
+    properties:
+        predefined:
+            definitions:
+                727eb84f-63e6-4401-8afa-c685e6ccb4cd:
+                    name: footer_text
+                    description: ''
+                    key: new_key
+                    type: text
+                    data: 'Copyright © 2025 - All Rights Reserved - Domain Name'
+                    config: ''
+                    ctype: document
+                    inheritable: false
+                    creationDate: 1764288821
+                    modificationDate: 1764326009

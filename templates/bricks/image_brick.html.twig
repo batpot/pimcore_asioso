@@ -1,0 +1,12 @@
+<div class="brick image-brick">
+  {% if brick.image %}
+    <img src="{{ brick.image }}" alt="{{ brick.caption|default('Image') }}">
+  {% else %}
+    <img src="https://via.placeholder.com/450x250" alt="Placeholder">
+  {% endif %}
+  <figcaption>
+    <h2>{{ brick.title|default('Indonectetus facilis leo nibh') }}</h2>
+    <p>{{ brick.content|default('This is some intro text...')|raw }}</p>
+    {% if brick.more %}<footer class="more"><a href="{{ brick.more }}">Read More &raquo;</a></footer>{% endif %}
+  </figcaption>
+</div>
