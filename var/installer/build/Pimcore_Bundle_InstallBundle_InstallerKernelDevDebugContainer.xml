@@ -38,7 +38,9 @@
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">Pimcore_Bundle_InstallBundle_InstallerKernelDevDebugContainer</parameter>
+
     <parameter key="secret">installer-692e229704d2e8.32057629</parameter>
+    <parameter key="secret">installer-6928e4d1bd2637.32957863</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -62,7 +64,11 @@
     </parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
+<<<<<<< HEAD
     <parameter key="kernel.secret">installer-692e229704d2e8.32057629</parameter>
+=======
+    <parameter key="kernel.secret">installer-6928e4d1bd2637.32957863</parameter>
+>>>>>>> aa034fe961e240038f9d6fd2a19284174e73e9de
     <parameter key="kernel.http_method_override">true</parameter>
     <parameter key="kernel.trust_x_sendfile_type_header">false</parameter>
     <parameter key="kernel.trusted_hosts" type="collection"/>
@@ -248,7 +254,11 @@
       <argument type="service" id="kernel"/>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpFoundation\UriSigner">
+<<<<<<< HEAD
       <argument>installer-692e229704d2e8.32057629</argument>
+=======
+      <argument>installer-6928e4d1bd2637.32957863</argument>
+>>>>>>> aa034fe961e240038f9d6fd2a19284174e73e9de
     </service>
     <service id="config_cache_factory" class="Symfony\Component\Config\ResourceCheckerConfigCacheFactory">
       <argument type="tagged_iterator" tag="config_cache.resource_checker"/>
