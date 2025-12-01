@@ -1,31 +1,22 @@
-<header class="site-header">
-  <div class="container">
-    <!--<div id="hgroup">
-      <h1><a href="{{ path('homepage') }}">Company Logo</a></h1>
-      <h2>HTML5 Website Template</h2>
-    </div>-->
+{# Logo & copyright #}
+<div id="nav-logo">
+  <a class="text-dark text-decoration-none" href="/">
+    <img id="logo-footer" src="{{ asset('/static/images/logo.png') }}" alt="Logo" width="100" height="auto">
+  </a>
+</div>
 
-     {# Logo & copyright #}
-      <div class="col-12 col-md">
-          <a class="text-dark text-decoration-none" href="/">
-              <img id="logo-footer" src="{{ asset('/static/images/logo.png') }}" alt="Logo" width="100" height="auto">
-          </a>
-      </div>
+<nav>
+  <ul id="nav-links">
+    <li><a href="{{ path('homepage') }}">Home</a></li>
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="{{ path('homepage') }}">Home</a></li>
-
-        {# list children of root (if any) #}
-        {% set root = document %}
-        {% if root %}
-          {% for page in root.getChildren() %}
-            {% if page.published %}
-              <li><a href="{{ page.getRealFullPath() }}">{{ page.getKey()|capitalize }}</a></li>
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-      </ul>
-    </nav>
-  </div>
-</header>
+    {# list children of root (if any) #}
+    {% set root = document %}
+    {% if root %}
+    {% for page in root.getChildren() %}
+    {% if page.published %}
+    <li><a href="{{ page.getRealFullPath() }}">{{ page.getKey()|capitalize }}</a></li>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+  </ul>
+</nav>

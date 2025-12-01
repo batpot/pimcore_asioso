@@ -1,35 +1,25 @@
-{# Editable footer snippet for Pimcore #}
-
 {% if editmode %}
-    {% do pimcore_head_link().appendStylesheet(asset('static/css/editmode.css')) %}
-    {{ pimcore_head_link() }}
+{% do pimcore_head_link().appendStylesheet(asset('static/css/editmode.css')) %}
+{{ pimcore_head_link() }}
 {% endif %}
 
-<footer class="container py-5">
-    <div class="row">
-
-      <div class="col-12 col-md">
-          <a class="text-dark text-decoration-none" href="/">
-              <small class="d-block mb-3 p-3">&copy; {{ "now"|date('Y') }} My Pimcore Site</small>
-          </a>
-      </div>
-
+<footer>
+    <div class="row3" id="footer-links">
         {% if editmode %}
-            <h3 class="float-left">{{ 'Footer Column(s):' }}</h3>
+        <h2 class="float-left">{{ 'Footer Column(s):' }}</h2>
         {% endif %}
         {% for i in pimcore_iterate_block(pimcore_block('mainlinkblock')) %}
-            <div class="col-6 col-md">
-                <h5>{{ pimcore_input('mainBlockTitle', {'placeholder': 'Footer Title'}, i) }}</h5>
-                <ul class="list-unstyled text-small">
-                    {% for i in pimcore_iterate_block(pimcore_block('linkblock')) %}
-                        <li>{{ pimcore_link('myLink', {'class': "text-muted"}, i) }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% if editmode %}
-                <hr />
-            {% endif %}
+        <nav class="col-3 col-md" id="footer-group">
+            <h5>{{ pimcore_input('mainBlockTitle', {'placeholder': 'Footer Title'}, i) }}</h5>
+            <ul>
+                {% for i in pimcore_iterate_block(pimcore_block('linkblock')) %}
+                <li>{{ pimcore_link('myLink', {'class': "text-muted"}, i) }}</li>
+                {% endfor %}
+            </ul>
+        </nav>
+        {% if editmode %}
+        <hr />
+        {% endif %}
         {% endfor %}
-
     </div>
 </footer>

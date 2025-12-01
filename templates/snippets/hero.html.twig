@@ -1,5 +1,5 @@
 <section class="hero-banner" 
-         style="background-image: url( {{ pimcore_image('heroImage') ?: asset('/static/images/960x360.gif') }} )>
+         style="background-image: url {{ pimcore_image('heroImage') }}
     <div class="hero-text">
         <h1>{{ pimcore_input('heroTitle', {'placeholder': 'Enter hero title'}) }}</h1>
         <p>{{ pimcore_input('heroSubtitle', {'placeholder': 'Enter hero subtitle'}) }}</p>

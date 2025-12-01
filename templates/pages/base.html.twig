@@ -4,7 +4,7 @@
 <head>
   <title>{{ document.title ?? 'asioso test template' }}</title>
 
-  <link rel="stylesheet" href="/static/css/layout.css">
+  <link rel="stylesheet" href="/static/css/style.css">
 
   <!--[if lt IE 9]>
         <script src="/static/js/html5shiv.js"></script>
@@ -13,13 +13,13 @@
 
 <body>
 
-  <div class="wrapper row1">
+  <div class="wrapper row1" id="header">
     {% block header %}
     {% include 'snippets/header.html.twig' %}
     {% endblock %}
   </div>
 
-  <div class="wrapper row2">
+  <div class="wrapper row2" id="main-content">
     <div id="container" class="clear">
 
       {# Slider (simple) #}
@@ -27,7 +27,7 @@
         {% if slider_image is defined and slider_image %}
         <a href="#"><img src="{{ slider_image }}" alt=""></a>
         {% else %}
-        <a href="#"><img src="src=" /static/images/960x360.gif" alt=""></a>
+        <a href="#"><img src="src="/static/images/960x360.gif" alt=""></a>
         {% endif %}
       </section>
 
@@ -61,10 +61,15 @@
     </div>
   </div>
 
-  <div class="wrapper row3">
+  <div class="wrapper row3" id="footer">
     {% block footer %}
     {% include 'snippets/footer.html.twig' %}
     {% endblock %}
+  </div>
+
+  <div class="wrapper row4" id="copyright">
+    <p>&copy; {{ "now"|date('Y') }} My Pimcore Site</p>
+    <p>Posao kod asioso</p>
   </div>
 
 </body>
